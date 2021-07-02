@@ -1,0 +1,87 @@
+<!-- Сообщаем браузеру как стоит обрабатывать эту страницу -->
+<!DOCTYPE html>
+<!-- Оболочка документа, указываем язык содержимого -->
+<html lang="en">
+	<!-- Заголовок страницы, контейнер для других важных данных (не отображается) -->
+	<head>
+		<!-- Заголовок страницы в браузере -->
+		<title>TheBrand</title>
+		<!-- Кодировка страницы -->
+		<meta charset="UTF-8">
+		<meta name="format-derection" content="telephone=no">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<!-- Подключаем шрифты -->
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+	<!-- Подключаем CSS -->
+	<link rel="stylesheet" href="css/style.css">
+	</head>
+<body>
+	<header class="header">
+		<div class="container header__page">
+			<nav class="header__left">
+				<a href="#" class="header__logo">
+					<img src="image/menu/brand.svg" alt="#">
+				</a>
+				<a href="#" class="header__title"><p>BRAN<span>D</span></p></a>
+				<form action="#" class="header__search">
+					<details class="header__browse">
+						<summary>Browse</summary>
+					</details>
+					<input placeholder="Search for Item..." type="search" class="header__field">
+					<button type="submit" class="header__btn"><img src="image/menu/loop.png" alt=""></button>
+				</form>
+			</nav>
+			<nav class="header__right">
+				<a href="#" class="header__cart"><img src="image/menu/cart.svg"></a>
+				<a href="#" class="header__acc">My Account</a>
+			</nav>
+		</div>
+	</header>
+	<div class="menu">
+		<nav class="menu__page container-mini">
+			<ul class="menu__item">
+				<li class="menu__link"><a href="#">Home</a></li>
+				<li class="menu__link"><a href="#">Man</a></li>
+				<li class="menu__link"><a href="#">Women</a></li>
+				<li class="menu__link"><a href="#">Kids</a></li>
+				<li class="menu__link"><a href="#">Accoseriese</a></li>
+				<li class="menu__link"><a href="#">Featured</a></li>
+				<li class="menu__link"><a href="#">Hot Deals</a></li>
+			</ul>
+		</nav>
+	</div>
+	<main class="content">
+		<section class="intro">
+			<div class="intro__page container">
+				<div class="intro__title">
+					<h1>THE BRAND</h1>
+					<p>OF LUXERIOUS <span>FASHION</span> </p>
+				</div>
+			</div>
+		</section>
+		<section class="card">
+			<div class="card__page container">
+				<div class="card__block">
+					<a href="#" class="card__item">
+						<img src="image/card/men.jpg" alt="#" class="card__image">
+						<p class="card__text">HOT DEAL <span>FOR MEN</span></p>
+					</a>
+					<a href="#" class="card__item">
+						<img src="image/card/accesories.jpg" alt="#" class="card__image">
+						<p class="card__text">LUXIROUS & trendy <span>ACCESORIES</span></p>
+					</a>
+					<a href="#" class="card__item">
+						<img src="image/card/women.jpg" alt="#" class="card__image">
+						<p class="card__text">30% offer <span>WOMEN</span></p>
+					</a>
+					<a href="#" class="card__item">
+						<img src="image/card/kids.jpg" alt="#" class="card__image">
+						<p class="card__text">new arrivals <span>FOR KIDS</span></p>
+					</a>
+				</div>
+			</div>
+		</section>
+	</main>
+</body>
