@@ -3,13 +3,16 @@
 <!-- Оболочка документа, указываем язык содержимого -->
 <html lang="en">
 <!-- Заголовок страницы, контейнер для других важных данных (не отображается) -->
+
 <head>
 	<!-- Заголовок страницы в браузере -->
 	<title>The brand</title>
 	<!-- Кодировка страницы -->
 	<meta charset="UTF-8">
 	<meta name="format-derection" content="telephone=no">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<!-- Favicon сайта -->
+	<link rel="icon" href="logo.ico">
 	<!-- Подключаем шрифты -->
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com">
@@ -17,6 +20,7 @@
 	<!-- Подключаем CSS -->
 	<link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 	<header class="header">
 		<div class="container header__page">
@@ -100,16 +104,35 @@
 					</li>
 				</ul>
 				<a href="registration.html" class="header__icon-login"><img src="image/menu/icon.svg" alt="#"></a>
-				<a href="cart.html" class="header__icon-cart"><img src="image/menu/cart.svg" alt="#"></a>
+				<span class="header__icon-cart-block">
+					<a href="#" class="header__icon-cart"><img src="image/menu/cart.svg" alt="#"></a>
+					<span class="header__icon-span">0</span>
+				</span>
+				<div class="basket hidden">
+					<div class="basketRow basketHeader">
+						<div>Название товара</div>
+						<div>Количество</div>
+						<div>Цена за шт.</div>
+						<div>Итого</div>
+					</div>
+
+					<div class="basketTotal">
+						Товаров в корзине на сумму:
+						$<span class="basketTotalValue">0</span>
+					</div>
+				</div>
 			</nav>
 		</div>
 	</header>
 	<main class="content">
 		<section class="intro">
-			<div class="container intro__page">
-				<div class="intro__title">
-					<h1>THE BRAND</h1>
-					<p>OF LUXERIOUS <span>FASHION</span> </p>
+			<div class="container intro__wrap">
+				<div class="intro__wrap-height"></div>
+				<div class="intro__text">
+					<h1 class="intro__text-main">
+						<span class="intro__text-brend">THE BRAND</span>
+						OF LUXERIOUS <span class="intro__text-fashion">FASHION</span>
+					</h1>
 				</div>
 			</div>
 		</section>
@@ -144,102 +167,6 @@
 					<p>Shop for items based on what we featured in this week</p>
 				</div>
 				<div class="fetured__item">
-					<div class="fetured__card">
-						<a href="product.html" class="fetured__link">
-							<img class="fetured__image" src="image/fetured/fetured1.jpg" alt="#">
-							<div class="fetured__text">
-								<div class="fetured__mintitle"><h3>ELLERY X M'O CAPSULE</h3></div>
-								<p class="fetured__info">Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.</p>
-								<p class="fetured__price">$52.00</p>
-							</div>
-						</a>
-						<div class="fetured__add">
-							<a href="#" class="fetured__btn">
-								<img src="image/menu/cart.svg" alt="#" class="fetured__cart">
-								<p>Add to Cart</p>
-							</a>
-						</div>
-					</div>
-					<div class="fetured__card">
-						<a href="product.html" class="fetured__link">
-							<img class="fetured__image" src="image/fetured/fetured2.jpg" alt="#">
-							<div class="fetured__text">
-								<div class="fetured__mintitle"><h3>ELLERY X M'O CAPSULE</h3></div>
-								<p class="fetured__info">Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.</p>
-								<p class="fetured__price">$52.00</p>
-							</div>
-						</a>
-						<div class="fetured__add">
-							<a href="#" class="fetured__btn">
-								<img src="image/menu/cart.svg" alt="#" class="fetured__cart">
-								<p>Add to Cart</p>
-							</a>
-						</div>
-					</div>
-					<div class="fetured__card">
-						<a href="product.html" class="fetured__link">
-							<img class="fetured__image" src="image/fetured/fetured3.jpg" alt="#">
-							<div class="fetured__text">
-								<div class="fetured__mintitle"><h3>ELLERY X M'O CAPSULE</h3></div>
-								<p class="fetured__info">Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.</p>
-								<p class="fetured__price">$52.00</p>
-							</div>
-						</a>
-						<div class="fetured__add">
-							<a href="#" class="fetured__btn">
-								<img src="image/menu/cart.svg" alt="#" class="fetured__cart">
-								<p>Add to Cart</p>
-							</a>
-						</div>
-					</div>
-					<div class="fetured__card">
-						<a href="product.html" class="fetured__link">
-							<img class="fetured__image" src="image/fetured/fetured4.jpg" alt="#">
-							<div class="fetured__text">
-								<div class="fetured__mintitle"><h3>ELLERY X M'O CAPSULE</h3></div>
-								<p class="fetured__info">Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.</p>
-								<p class="fetured__price">$52.00</p>
-							</div>
-						</a>
-						<div class="fetured__add">
-							<a href="#" class="fetured__btn">
-								<img src="image/menu/cart.svg" alt="#" class="fetured__cart">
-								<p>Add to Cart</p>
-							</a>
-						</div>
-					</div>
-					<div class="fetured__card">
-						<a href="product.html" class="fetured__link">
-							<img class="fetured__image" src="image/fetured/fetured5.jpg" alt="#">
-							<div class="fetured__text">
-								<div class="fetured__mintitle"><h3>ELLERY X M'O CAPSULE</h3></div>
-								<p class="fetured__info">Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.</p>
-								<p class="fetured__price">$52.00</p>
-							</div>
-						</a>
-						<div class="fetured__add">
-							<a href="#" class="fetured__btn">
-								<img src="image/menu/cart.svg" alt="#" class="fetured__cart">
-								<p>Add to Cart</p>
-							</a>
-						</div>
-					</div>
-					<div class="fetured__card">
-						<a href="product.html" class="fetured__link">
-							<img class="fetured__image" src="image/fetured/fetured6.jpg" alt="#">
-							<div class="fetured__text">
-								<div class="fetured__mintitle"><h3>ELLERY X M'O CAPSULE</h3></div>
-								<p class="fetured__info">Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.</p>
-								<p class="fetured__price">$52.00</p>
-							</div>
-						</a>
-						<div class="fetured__add">
-							<a href="#" class="fetured__btn">
-								<img src="image/menu/cart.svg" alt="#" class="fetured__cart">
-								<p>Add to Cart</p>
-							</a>
-						</div>
-					</div>
 				</div>
 				<div class="fetured__button">
 					<a class="fetured__browse" href="catalog.html">Browse All Product</a>
@@ -258,7 +185,8 @@
 						<h3>Free Delivery</h3>
 					</div>
 					<div class="footer__paragraph">
-						<p>Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.</p>
+						<p>Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.
+						</p>
 					</div>
 				</div>
 				<div class="footer__column">
@@ -269,7 +197,8 @@
 						<h3>Sales & discounts</h3>
 					</div>
 					<div class="footer__paragraph">
-						<p>Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.</p>
+						<p>Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.
+						</p>
 					</div>
 				</div>
 				<div class="footer__column">
@@ -280,7 +209,8 @@
 						<h3>Quality assurance</h3>
 					</div>
 					<div class="footer__paragraph">
-						<p>Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.</p>
+						<p>Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.
+						</p>
 					</div>
 				</div>
 			</div>
@@ -292,7 +222,8 @@
 						<img src="image/footer/women.png" alt="#">
 					</div>
 					<div class="footer__text">
-						<p>“Vestibulum quis porttitor dui! Quisque viverra nunc mi, <span>a pulvinar purus condimentum</span>“</p>
+						<p>“Vestibulum quis porttitor dui! Quisque viverra nunc mi, <span>a pulvinar purus condimentum</span>“
+						</p>
 					</div>
 				</article>
 				<div class="footer__input">
@@ -330,6 +261,11 @@
 		</div>
 	</footer>
 	<!-- Подключаем скрипты -->
+	<script src="js/basket.js"></script>
+	<script src="js/productDTO.js"></script>
+	<script src="js/products.js"></script>
+	<script src="js/productsCards.js"></script>
 	<script src="https://kit.fontawesome.com/c9b9b3d2fd.js" crossorigin="anonymous"></script>
 </body>
+
 </html>
