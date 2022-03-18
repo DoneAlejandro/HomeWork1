@@ -1,21 +1,35 @@
 /*Обнуление*/
-*{
+* {
 	padding: 0;
 	margin: 0;
 	border: 0;
 	box-sizing: border-box;
 }
-*,*:befor,*after{
+*,
+*:before,
+*:after {
 	-moz-box-sizing: border-box;
-	-webkit-box-sizing:border-box;
+	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 }
-:focus,:active{outline: none;}
-a:focus,a:active{outline:none;}
+:focus,
+:active {
+	outline: none;
+}
+a:focus,
+a:active {
+	outline: none;
+}
 
-nav,footer,header,aside{display: block;}
+nav,
+footer,
+header,
+aside {
+	display: block;
+}
 
-html,body{
+html,
+body {
 	height: 100%;
 	width: 100%;
 	font-size: 100%;
@@ -27,13 +41,29 @@ html,body{
 }
 /*input,button,textarea{font-family:inherit;}*/
 
-input::-ms-clear{display: none;}
-button{cursor: pointer;}
-button::-moz-focus-inner {padding:0;border:0;}
-a, a:visited{text-decoration: none;}
-a:hover{text-emphasis: none;}
-ul li{list-style: none;}
-img{vertical-align: top;}
+input::-ms-clear {
+	display: none;
+}
+button {
+	cursor: pointer;
+}
+button::-moz-focus-inner {
+	padding: 0;
+	border: 0;
+}
+a,
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-emphasis: none;
+}
+ul li {
+	list-style: none;
+}
+img {
+	vertical-align: top;
+}
 
 /* h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: 400;}*/
 
@@ -41,20 +71,19 @@ img{vertical-align: top;}
 $transd: 0.3s;
 $fectured: 100vh/3;
 
-body{
-	font-family: 'Lato', sans-serif;
+body {
+	font-family: "Lato", sans-serif;
+	display: grid;
+	min-height: 100vh;
+	grid-template-rows: auto 1fr min-content;
 }
 
-
 /*Стиль контейнера*/
-.container{
+.container {
 	max-width: 1160px;
 	padding: 0 10px;
 	margin: 0 auto;
-	}
-
-
-
+}
 
 // Стиль хэдера
 .header {
@@ -65,7 +94,6 @@ body{
 		align-items: center;
 		justify-content: space-between;
 	}
-	&__left {}
 	&__logo {
 		margin: 0 41px 0 0;
 	}
@@ -76,20 +104,19 @@ body{
 	&__right {
 		display: flex;
 	}
-	&__right>li{
+	&__right > li {
 		position: relative;
 	}
 	&__list a:hover {
-		color: #F16D7F;
+		color: #f16d7f;
 		transition-duration: $transd;
 	}
-	&__list>li{
+	&__list > li {
 		margin: 0 25px 0 0;
 	}
-	&__list>li:hover .sub-header__list{
+	&__list > li:hover .sub-header__list {
 		display: block;
 	}
-	&__icon {}
 	&__navigation-title {
 		font-weight: bold;
 		font-size: 14px;
@@ -98,16 +125,74 @@ body{
 	&__navigation-link {
 		min-width: 232px;
 		font-size: 14px;
-		color: #F16D7F;
+		color: #f16d7f;
 		display: inline-block;
 		padding: 0px 144px 0px 34px;
-
 	}
 	&__icon-login {
 		margin: 0 42px 0 0;
 	}
-	&__icon-cart {}
+	&__icon-cart-block {
+		position: relative;
+		cursor: pointer;
+	}
+	&__icon-span {
+		display: inline-block;
+		width: 19px;
+		height: 19px;
+		color: white;
+		background: #f16d7f;
+		border-radius: 50%;
+		position: absolute;
+		text-align: center;
+		right: -8px;
+		top: -6px;
+		font-size: 12px;
+		line-height: 19px;
+	}
 }
+.basket {
+	position: absolute;
+	z-index: 3;
+	background: white;
+	padding: 10px;
+	border: 1px solid #ebebeb;
+	border-radius: 3px;
+	font-size: 14px;
+	right: 100px;
+	top: 62px;
+	opacity: 0.8;
+}
+
+@media (min-width: 340px) {
+	.basket {
+		font-size: 16px;
+	}
+}
+@media (min-width: 552px) {
+	.basket {
+		width: 500px;
+	}
+}
+.hidden {
+	display: none;
+}
+.basketRow {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 10px;
+	margin-bottom: 10px;
+	border-bottom: 1px solid #ebebeb;
+	padding-bottom: 10px;
+}
+.basketHeader {
+	font-weight: bold;
+}
+.basketTotal {
+	font-weight: bold;
+	text-align: right;
+}
+
 .sub-header {
 	&__list {
 		display: none;
@@ -115,18 +200,15 @@ body{
 		top: 40px;
 		padding: 37px 0px 0px 0;
 		z-index: 1;
-		box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+		box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 	}
-	&__list>li {
+	&__list > li {
 		background-color: #fff;
-
 	}
-	&__list>li:hover .sub-sub-header__list {
+	&__list > li:hover .sub-sub-header__list {
 		display: block;
 	}
 }
-
-
 
 .sub-sub-header {
 	&__list {
@@ -145,53 +227,66 @@ body{
 			padding: 0 0 78px 54px;
 		}
 	}
-	&__list>li {
+	&__list > li {
 		background-color: #fff;
 	}
 	&__link {
 		font-size: 14px;
-		color: #6F6E6E;
+		color: #6f6e6e;
 		padding: 12px;
 		display: inline-block;
 	}
 }
-
-
-
-
 .intro {
-	height: 768px;
-	background: #F1E4E6;
+	background-color: #f1e4e6;
 	margin: 0 0 65px 0;
-	&__page {
+
+	&__wrap {
+		background-image: url("../image/bg/men.png");
+		background-size: 33%;
+		background-repeat: no-repeat;
+		background-position: left bottom;
 		display: flex;
-		justify-content: flex-end;
-		align-items: center;
-		height: 100%;
-		background: url("../image/bg/men.png") no-repeat;
-		background-size: contain;
-		background-position: -194px 0;
+		align-items: flex-start;
 	}
-	&__title {
-		border-left: 12px solid #F16D7F;
+
+	&__wrap-height {
+		padding: 67% 0 0 0;
 	}
-	&__title h1 {
+
+	&__text {
+		border-left: 12px solid #f16d7f;
+		margin: 25.4% 0 0 55.65%;
+	}
+
+	&__text {
+		margin-bottom: 30px;
+	}
+
+	&__text-main {
 		padding: 0 0 0 16px;
-		font-weight: 900;
-		font-size: 48px;
-		line-height: 58px;
-	}
-	&__title p {
-		padding: 0 0 0 16px;
-		font-weight: bold;
 		font-size: 32px;
 		line-height: 38px;
+		max-width: 400px;
 	}
-	&__title span {
-		color: #F16D7F;
+
+	&__text-brend {
+		font-size: 48px;
+		line-height: 58px;
+		display: block;
+	}
+
+	&__text-fashion {
+		color: #f16d7f;
 	}
 }
-
+@media (max-width: 930px) {
+	.intro {
+		&__text {
+			margin: 25.4% 0 0 45%;
+		}
+	}
+}
 
 // Стиль карточек
 
@@ -229,7 +324,7 @@ body{
 		position: absolute;
 		font-size: 16px;
 		line-height: 19px;
-		color: #FFFFFF;
+		color: #ffffff;
 		text-align: center;
 		display: flex;
 		flex-direction: column;
@@ -239,24 +334,19 @@ body{
 		font-weight: bold;
 		font-size: 24px;
 		line-height: 29px;
-		color: #F16D7F;
+		color: #f16d7f;
 	}
 }
 
-
-
-
-
 // Стиль товара
-
 
 .fetured {
 	margin: 56px 0 0 0;
-	&__page {}
 	&__title {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+		text-align: center;
 		font-size: 30px;
 		line-height: 36px;
 		color: #222222;
@@ -266,7 +356,7 @@ body{
 		padding: 6px 0 0 0;
 		font-size: 14px;
 		line-height: 17px;
-		color: #9F9F9F;
+		color: #9f9f9f;
 	}
 
 	&__item {
@@ -290,7 +380,7 @@ body{
 		width: 100%;
 	}
 	&__text {
-		background: #F8F8F8;
+		background: #f8f8f8;
 		padding: 25px 29px 20px 16px;
 	}
 	&__mintitle {
@@ -303,38 +393,42 @@ body{
 		font-weight: 300;
 		font-size: 14px;
 		line-height: 17px;
-		color: #5D5D5D;
+		color: #5d5d5d;
 		margin: 0 0 18px 0;
 	}
 	&__price {
 		font-size: 16px;
-		color: #F16D7F;
+		color: #f16d7f;
 	}
 	&__add {
 		display: none;
 		position: absolute;
-		top: 200px;
-		justify-content: center;
+		bottom: 300px;
 		width: 100%;
 	}
 	&__btn {
 		display: flex;
+		justify-content: center;
+		background: none;
 		font-size: 14px;
 		color: #fff;
 		padding: 10px;
 		border: 1px solid #fff;
 	}
-	&__btn p{
+	&__btn p {
 		padding: 5px 0;
 	}
 	&__btn:hover {
 		box-shadow: 0 0 10px #fff;
+		transition-duration: $transd;
 	}
 	&__cart {
 		margin: 0 11px 0 0;
 	}
 	&__card:hover &__add {
 		display: flex;
+		align-items: center;
+		justify-content: center;
 	}
 	&__button {
 		margin: 18px 0 95px 0;
@@ -342,19 +436,18 @@ body{
 		justify-content: center;
 	}
 	&__browse {
-		outline: 1px solid #FF6A6A;
+		outline: 1px solid #ff6a6a;
 		padding: 14px 38px;
 		font-size: 16px;
 		line-height: 19px;
-		color: #F26376;
+		color: #f26376;
 	}
 	&__browse:hover {
-		background-color: #F26376;
+		background-color: #f26376;
 		color: #fff;
 		outline: none;
 		transition-duration: $transd;
 	}
-
 }
 
 // Стиль футера
@@ -378,13 +471,13 @@ body{
 		margin: 0 0 16px 0;
 		font-size: 20px;
 		line-height: 24px;
-		color: #FBFBFB;
+		color: #fbfbfb;
 	}
 	&__paragraph {
 		font-size: 13.972px;
 		line-height: 17px;
 		text-align: center;
-		color: #FBFBFB;
+		color: #fbfbfb;
 	}
 	&__center {
 		padding: 87px 0 126px 0;
@@ -404,12 +497,13 @@ body{
 		margin: 0 0 30px 0;
 	}
 	&__text {
+		max-width: 360px;
 		font-size: 20px;
 		line-height: 24px;
 		text-align: center;
 		color: #222224;
 	}
-	&__text span{
+	&__text span {
 		font-style: italic;
 	}
 	&__input {
@@ -422,12 +516,12 @@ body{
 		color: #222224;
 		margin: 0 0 32px 0;
 	}
-	&__subtitle h3{
+	&__subtitle h3 {
 		line-height: 29px;
 		font-weight: 700;
 		font-size: 24px;
 	}
-	&__subtitle h4{
+	&__subtitle h4 {
 		font-weight: 400;
 		line-height: 22px;
 		font-size: 18px;
@@ -441,7 +535,7 @@ body{
 		border-top-left-radius: 30px;
 		border-bottom-left-radius: 30px;
 	}
-	&__field::placeholder{
+	&__field::placeholder {
 		font-size: 14px;
 		line-height: 17px;
 		color: #222224;
@@ -450,16 +544,16 @@ body{
 	&__btn {
 		border-radius: 0 30px 30px 0;
 		padding: 20px;
-		background: #F16D7F;
+		background: #f16d7f;
 		font-size: 14px;
 		line-height: 17px;
-		color: #FFFFFF;
+		color: #ffffff;
 	}
 	&__btn:hover {
-		background: #Fff;
-		color: #F16D7F;
+		background: #fff;
+		color: #f16d7f;
 		transition-duration: $transd;
-		outline: 1px solid #F16D7F;
+		outline: 1px solid #f16d7f;
 	}
 
 	&__bottom {
@@ -475,69 +569,85 @@ body{
 		display: flex;
 		font-size: 16px;
 		line-height: 19px;
-		color: #FBFBFB;
+		color: #fbfbfb;
 	}
 	&__social {
+		display: flex;
 	}
 	&__min-link {
-		background: #FFFFFF;
-		padding: 9px 8px;
+		background: #ffffff;
+		width: 32px;
+		height: 32px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 	}
 	&__min-link:not(:last-child) {
 		margin: 0 7px 0 0;
 	}
 	&__min-link:hover {
-		background: #F16D7F;
+		background: #f16d7f;
 		transition-duration: $transd;
 	}
-	&__min-link:hover .fa-facebook-f{
+	&__min-link:hover .fa-facebook-f {
 		color: #fff;
 		transition-duration: $transd;
 	}
-	&__min-link:hover .fa-instagram{
+	&__min-link:hover .fa-instagram {
 		color: #fff;
 		transition-duration: $transd;
 	}
-	&__min-link:hover .fa-pinterest-p{
+	&__min-link:hover .fa-pinterest-p {
 		color: #fff;
 		transition-duration: $transd;
 	}
-	&__min-link:hover .fa-twitter{
+	&__min-link:hover .fa-twitter {
 		color: #fff;
 		transition-duration: $transd;
 	}
-.fa-facebook-f {
-
-	color: #000;
+	.fa-facebook-f {
+		color: #000;
 	}
 
-.fa-instagram {
-	color: #000;
+	.fa-instagram {
+		color: #000;
 	}
 
-.fa-pinterest-p {
-	color: #000;
+	.fa-pinterest-p {
+		color: #000;
 	}
 
-.fa-twitter {
-	color: #000;
+	.fa-twitter {
+		color: #000;
 	}
-
 }
 
 @media screen and (max-width: 768px) {
+	.basket {
+		right: 50px;
+		width: 300px;
+		font-size: 12px;
+	}
 	.intro {
-		height: 368px;
-		&__page {
-			background-position: bottom left;
+		margin: 0 0 20px 0;
+
+		&__text-main {
+			font-size: 21px;
+			line-height: 29px;
 		}
-		&__title h1 {
+		&__text-brend {
 			font-size: 44px;
 			line-height: 53px;
 		}
-		&__title p {
-			font-size: 24px;
-			line-height: 29px;
+		&__text {
+			margin: 17% 0 30px 55.65%;
+		}
+		&__wrap {
+			background-position: 14% bottom;
+			background-size: 24%;
+		}
+		&__wrap-height {
+			padding: 49% 0 0 0;
 		}
 	}
 	.fetured {
@@ -546,7 +656,7 @@ body{
 			margin: 0 0 74px 0;
 		}
 		&__card {
-		max-width: 49%;
+			max-width: 49%;
 		}
 		&__button {
 			margin: 0 0 65px 0;
@@ -579,8 +689,40 @@ body{
 			margin: 0 auto;
 			padding: 0 0 48px 0;
 		}
+		&__field {
+			padding: 20px 100px 20px 22px;
+		}
 		&__bottom {
 			padding: 30px 32px;
+		}
+	}
+}
+@media (max-width: 650px) {
+	.intro {
+		&__text {
+			margin: 17% 0 30px 43%;
+		}
+		&__text-brend {
+			font-size: 38px;
+			line-height: 46px;
+		}
+		&__wrap {
+			min-height: 363px;
+			justify-content: center;
+			align-items: center;
+			background: none;
+		}
+		&__text {
+			margin: 30px 0;
+		}
+		&__text-main {
+			font-size: 20px;
+			line-height: 24px;
+		}
+	}
+	.card {
+		&__text span {
+			font-size: 18px;
 		}
 	}
 }
@@ -593,6 +735,14 @@ body{
 		&__icon-cart {
 			display: none;
 		}
+	}
+	.sub-header {
+		&__list {
+			right: 0px;
+		}
+	}
+	.basket {
+		right: 5px;
 	}
 	.intro {
 		height: 368px;
@@ -628,40 +778,16 @@ body{
 		}
 	}
 	.fetured {
-		
-		&__title {
-			
-		}
 		&__item {
 			flex-direction: column;
-			
-
 		}
 		&__card {
-			min-width: 359px;
-		}
-		&__button {
-			
+			max-width: 359px;
 		}
 	}
 	.footer {
-		&__page {
-			
-		}
-		&__top {
-			
-		}
 		&__column {
 			width: 86%;
-		}
-		&__column:last-child {
-			
-		}
-		&__center {
-			
-		}
-		&__intro {
-			
 		}
 		&__comment {
 			max-width: 100%;
@@ -673,7 +799,7 @@ body{
 			font-size: 14px;
 		}
 		&__field {
-			padding: 15px 95px 15px 22px;
+			padding: 10px 30px 10px 22px;
 		}
 		&__net {
 			width: 100%;
@@ -684,13 +810,7 @@ body{
 			margin: 0 auto;
 		}
 		&__social {
-			margin: 40px 0 40px 0;
+			margin: 40px auto;
 		}
 	}
 }
-
-
-
-
-
-
